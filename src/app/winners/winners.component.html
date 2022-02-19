@@ -1,0 +1,16 @@
+
+
+    <input type="number" placeholder="enter year"/>
+    <input type="string" placeholder="enter category"/>
+    <button (click)="generateTable()">Generate</button>
+    <table style="width:100%" border="1">
+        <th>year</th>
+        <th>category</th>
+      <ng-container *ngFor="let data of wdata.prizes;let index=index">
+        <tr>
+          <td>{{data.year}}</td>
+          <td>{{data.category}}</td>
+        </tr>
+      </ng-container>
+        
+    </table>
